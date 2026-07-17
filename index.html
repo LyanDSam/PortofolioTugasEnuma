@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio Samuel Lyandro Saputra (Andro) - Full Stack Developer. Siswa SMK Negeri 2 Surakarta jurusan Pengembangan Perangkat Lunak dan Gim yang berfokus pada pengembangan aplikasi web modern menggunakan React, Next.js, Laravel, dan Supabase.">
+  <meta name="keywords" content="Samuel Lyandro Saputra, Andro, Portfolio, Full Stack Developer, SMK Negeri 2 Surakarta, PPLG, Web Developer Surakarta, React, Next.js, Laravel, Supabase">
+  <meta name="author" content="Samuel Lyandro Saputra">
+  <link rel="canonical" href="https://github.com/LyanDSam">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/LyanDSam">
+  <meta property="og:title" content="Samuel Lyandro Saputra — Full Stack Developer Portfolio">
+  <meta property="og:description" content="Portfolio modern, cepat, dan berfokus pada pengguna oleh Samuel Lyandro Saputra (Andro). Siswa PPLG SMK Negeri 2 Surakarta.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/LyanDSam/LyanDSam/main/portfolio-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://github.com/LyanDSam">
+  <meta property="twitter:title" content="Samuel Lyandro Saputra — Full Stack Developer Portfolio">
+  <meta property="twitter:description" content="Portfolio modern, cepat, dan berfokus pada pengguna oleh Samuel Lyandro Saputra (Andro). Siswa PPLG SMK Negeri 2 Surakarta.">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/LyanDSam/LyanDSam/main/portfolio-preview.jpg">
+
+  <title>Samuel Lyandro Saputra — Full Stack Developer</title>
+
+  <!-- Google Fonts Preconnect & Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233B82F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 2 7 12 12 22 7 12 2'/%3E%3Cpolyline points='2 17 12 22 22 17'/%3E%3Cpolyline points='2 12 12 17 22 12'/%3E%3C/svg%3E">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samuel Lyandro Saputra",
+    "alternateName": ["Samuel", "Andro"],
+    "jobTitle": "Full Stack Developer",
+    "url": "https://github.com/LyanDSam",
+    "sameAs": [
+      "https://github.com/LyanDSam",
+      "https://www.linkedin.com/in/samuel-lyandro-saputra-57b73b382/",
+      "https://instagram.com/elyo0.o"
+    ],
+    "knowsAbout": ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS", "Laravel", "REST API", "Supabase", "Firebase", "PHP", "Git", "GitHub", "UI Design", "UX Design"],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "SMK Negeri 2 Surakarta",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Surakarta",
+        "addressCountry": "ID"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+          <path d="M30 20 L70 20 L50 50 L70 80 L30 80 L50 50 Z" fill="none" stroke="#3B82F6" stroke-width="6" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="loader-progress-container">
+        <div class="loader-progress-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-text"><span id="loader-percent">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Film Grain Overlay -->
+  <div class="film-grain"></div>
+
+  <!-- Custom Mouse Follower -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Ambient Aurora Glows -->
+  <div class="aurora-glow glow-1" aria-hidden="true"></div>
+  <div class="aurora-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Spotlight Grid Background Overlay -->
+  <div id="spotlight-grid" class="spotlight-grid" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation Header -->
+  <header id="header" class="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Beranda Samuel Lyandro Saputra">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="36" height="36" aria-hidden="true">
+          <path d="M30 20 L70 20 L50 50 L70 80 L30 80 L50 50 Z" fill="none" stroke="url(#logo-grad)" stroke-width="8" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3B82F6" />
+              <stop offset="100%" stop-color="#22D3EE" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">Andro</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social / Action Icons -->
+      <div class="header-socials">
+        <a href="https://github.com/LyanDSam" target="_blank" rel="noopener noreferrer" class="social-icon-btn magnetic" aria-label="Profil GitHub Samuel">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/samuel-lyandro-saputra-57b73b382/" target="_blank" rel="noopener noreferrer" class="social-icon-btn magnetic" aria-label="Profil LinkedIn Samuel">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false" id="mobile-toggle">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <nav class="mobile-nav" aria-label="Navigasi Seluler">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-socials">
+        <a href="https://github.com/LyanDSam" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+        <a href="https://www.linkedin.com/in/samuel-lyandro-saputra-57b73b382/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="https://instagram.com/elyo0.o" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <!-- Floating Badges for WOW factor -->
+      <div class="floating-badge badge-nextjs" style="--float-delay: 0s; --float-duration: 6s;">
+        <span class="badge-text">Next.js</span>
+      </div>
+      <div class="floating-badge badge-laravel" style="--float-delay: 1.5s; --float-duration: 8s;">
+        <span class="badge-text">Laravel</span>
+      </div>
+      <div class="floating-badge badge-supabase" style="--float-delay: 3s; --float-duration: 7s;">
+        <span class="badge-text">Supabase</span>
+      </div>
+
+      <div class="hero-content container">
+        <div class="hero-label-container reveal">
+          <span class="hero-label">PORTFOLIO</span>
+        </div>
+        <h1 class="hero-headline reveal">
+          <span class="glitch-text" data-text="Full Stack">Full Stack</span>
+          <span class="gradient-text">Developer</span>
+        </h1>
+        <h2 class="hero-subheadline reveal" id="hero-subheadline">
+          Building modern, fast, and user-focused web experiences.
+        </h2>
+        <p class="hero-description reveal">
+          Saya adalah siswa SMK yang berfokus pada pengembangan aplikasi web modern menggunakan React, Next.js, Laravel, dan Supabase. Saya menikmati memecahkan masalah melalui logika, desain yang bersih, dan pengalaman pengguna yang nyaman.
+        </p>
+        <div class="hero-cta-group reveal">
+          <a href="#projects" class="btn btn-primary magnetic" id="cta-projects">
+            <span>Lebih lanjut</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline magnetic" id="cta-contact">
+            <span>Hubungi Saya</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator reveal" style="transition-delay: 0.6s;">
+        <span class="scroll-text">Gulir untuk menjelajah</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section container">
+      <div class="section-layout">
+        <!-- Sticky left column for section title in editorial style -->
+        <div class="section-header-col reveal">
+          <span class="section-num">01 //</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="horizontal-line"></div>
+        </div>
+
+        <div class="section-content-col reveal">
+          <div class="about-intro-text">
+            Saya adalah siswa <span class="highlight-text">SMK Negeri 2 Surakarta</span> jurusan Pengembangan Perangkat Lunak dan Gim yang memiliki ketertarikan besar pada pengembangan web modern.
+          </div>
+          <div class="about-grid">
+            <div class="about-image-col">
+              <div class="about-image-card tilt-card">
+                <div class="meta-card-glow"></div>
+                <img src="assets/images/myphoto.jpg" alt="Samuel Lyandro Saputra" class="about-profile-img">
+              </div>
+            </div>
+            <div class="about-info-col">
+              <div class="about-block">
+                <p>Saya terus mempelajari React, Next.js, Laravel, serta Supabase untuk membangun aplikasi yang cepat, responsif, dan nyaman digunakan.</p>
+                <p>Saya percaya bahwa aplikasi yang baik bukan hanya berjalan dengan benar, tetapi juga memberikan pengalaman pengguna yang menyenangkan. Karena itu saya selalu berusaha membuat antarmuka yang sederhana, modern, dan mudah dipahami.</p>
+              </div>
+              <div class="about-meta-card tilt-card">
+                <div class="meta-card-glow"></div>
+                <h3 class="meta-card-title">Profil Singkat</h3>
+                <ul class="meta-list">
+                  <li>
+                    <span class="meta-label">Nama Lengkap</span>
+                    <span class="meta-value">Samuel Lyandro Saputra</span>
+                  </li>
+                  <li>
+                    <span class="meta-label">Nama Panggilan</span>
+                    <span class="meta-value">Samuel / Andro</span>
+                  </li>
+                  <li>
+                    <span class="meta-label">Jurusan</span>
+                    <span class="meta-value">Pengembangan Perangkat Lunak dan Gim (PPLG)</span>
+                  </li>
+                  <li>
+                    <span class="meta-label">Lokasi</span>
+                    <span class="meta-value">Surakarta, Indonesia</span>
+                  </li>
+                  <li>
+                    <span class="meta-label">Tujuan</span>
+                    <span class="meta-value">Full Stack Developer Profesional</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section container">
+      <div class="section-layout">
+        <div class="section-header-col reveal">
+          <span class="section-num">02 //</span>
+          <h2 class="section-title">My Skills</h2>
+          <div class="horizontal-line"></div>
+        </div>
+
+        <div class="section-content-col reveal">
+          <p class="skills-intro">Teknologi dan perkakas yang saya gunakan untuk mewujudkan ide menjadi aplikasi digital yang interaktif dan fungsional.</p>
+          
+          <div class="skills-grid">
+            <!-- Frontend -->
+            <div class="skills-category-card tilt-card">
+              <div class="category-header">
+                <span class="category-num">02.1</span>
+                <h3 class="category-name">Frontend</h3>
+              </div>
+              <ul class="skills-list">
+                <li class="skill-item">HTML5</li>
+                <li class="skill-item">CSS3</li>
+                <li class="skill-item">JavaScript</li>
+                <li class="skill-item">React</li>
+                <li class="skill-item">Next.js</li>
+                <li class="skill-item">Tailwind CSS</li>
+              </ul>
+            </div>
+
+            <!-- Backend & DB -->
+            <div class="skills-category-card tilt-card">
+              <div class="category-header">
+                <span class="category-num">02.2</span>
+                <h3 class="category-name">Backend & Database</h3>
+              </div>
+              <ul class="skills-list">
+                <li class="skill-item">Laravel</li>
+                <li class="skill-item">REST API</li>
+                <li class="skill-item">Supabase</li>
+                <li class="skill-item">Firebase</li>
+              </ul>
+            </div>
+
+            <!-- Programming & Tools -->
+            <div class="skills-category-card tilt-card">
+              <div class="category-header">
+                <span class="category-num">02.3</span>
+                <h3 class="category-name">Programming & Tools</h3>
+              </div>
+              <ul class="skills-list">
+                <li class="skill-item">JavaScript</li>
+                <li class="skill-item">PHP</li>
+                <li class="skill-item">Git & GitHub</li>
+                <li class="skill-item">VS Code</li>
+                <li class="skill-item">Netlify & Vercel</li>
+                <li class="skill-item">Cloudinary & Postman</li>
+              </ul>
+            </div>
+
+            <!-- Design -->
+            <div class="skills-category-card tilt-card">
+              <div class="category-header">
+                <span class="category-num">02.4</span>
+                <h3 class="category-name">Design</h3>
+              </div>
+              <ul class="skills-list">
+                <li class="skill-item">UI Design</li>
+                <li class="skill-item">UX Design</li>
+                <li class="skill-item">Responsive Design</li>
+                <li class="skill-item">Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section container">
+      <div class="section-layout">
+        <div class="section-header-col reveal">
+          <span class="section-num">03 //</span>
+          <h2 class="section-title">Projects</h2>
+          <div class="horizontal-line"></div>
+        </div>
+
+        <div class="section-content-col">
+          <div class="projects-grid">
+            
+            <!-- Project 1: Nontown -->
+            <article class="project-card reveal tilt-card">
+              <div class="project-header">
+                <div class="project-meta">
+                  <span class="project-role">Full Stack Developer</span>
+                  <span class="project-status status-ongoing">On Going</span>
+                </div>
+                <h3 class="project-title">Nontown</h3>
+              </div>
+              
+              <!-- Premium CSS Browser Mockup of Nontown -->
+              <div class="project-preview" aria-hidden="true">
+                <div class="browser-chrome">
+                  <div class="browser-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="browser-address">nontown.vercel.app</div>
+                </div>
+                <div class="browser-body has-image">
+                  <img src="assets/images/nontown.png" alt="Nontown - Movie Portal & Streaming Preview" class="project-mockup-img">
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p class="project-desc">Website untuk mencari informasi film, memberikan rating, dan sedang dikembangkan menuju platform streaming.</p>
+                <div class="project-highlights">
+                  <span class="highlight-tag">Movie Database</span>
+                  <span class="highlight-tag">Rating</span>
+                  <span class="highlight-tag">Authentication</span>
+                  <span class="highlight-tag">Streaming (Coming Soon)</span>
+                </div>
+                <div class="project-tech-stack">
+                  <span class="tech-pill">Next.js</span>
+                  <span class="tech-pill">Supabase</span>
+                  <span class="tech-pill">TMDb API</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://nontown.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>Kunjungi Demo</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Ratingku -->
+            <article class="project-card reveal tilt-card">
+              <div class="project-header">
+                <div class="project-meta">
+                  <span class="project-role">Frontend Developer</span>
+                  <span class="project-status status-completed">Completed</span>
+                </div>
+                <h3 class="project-title">Ratingku</h3>
+              </div>
+              
+              <!-- Premium CSS Browser Mockup of Ratingku -->
+              <div class="project-preview" aria-hidden="true">
+                <div class="browser-chrome">
+                  <div class="browser-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                  <div class="browser-address">ratingku.netlify.app</div>
+                </div>
+                <div class="browser-body has-image">
+                  <img src="assets/images/ratingku.png" alt="Ratingku - Movie Reviews Preview" class="project-mockup-img">
+                </div>
+              </div>
+
+              <div class="project-body">
+                <p class="project-desc">Website sederhana untuk memberikan rating terhadap film dengan tampilan modern.</p>
+                <div class="project-highlights">
+                  <span class="highlight-tag">Movie Rating</span>
+                  <span class="highlight-tag">Responsive</span>
+                  <span class="highlight-tag">Modern UI</span>
+                </div>
+                <div class="project-tech-stack">
+                  <span class="tech-pill">HTML</span>
+                  <span class="tech-pill">CSS</span>
+                  <span class="tech-pill">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://ratingku.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>Kunjungi Demo</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section container">
+      <div class="section-layout">
+        <div class="section-header-col reveal">
+          <span class="section-num">04 //</span>
+          <h2 class="section-title">Experience</h2>
+          <div class="horizontal-line"></div>
+        </div>
+
+        <div class="section-content-col reveal">
+          <div class="experience-timeline">
+            <div class="timeline-node">
+              <div class="timeline-dot-ring">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-header">
+                <span class="timeline-date">2025</span>
+                <h3 class="timeline-role">Samsung Innovation Campus 2025</h3>
+                <span class="timeline-org">Samsung & Dibimbing</span>
+              </div>
+              <div class="timeline-body">
+                <p>Mengikuti pelatihan intensif dan kompetisi tingkat nasional di bidang Machine Learning dan Internet of Things (IoT). Melalui program ini, saya mengembangkan pemecahan masalah berbasis AI dan integrasi perangkat keras untuk menciptakan solusi pintar yang berfokus pada efisiensi energi dan otomatisasi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section container">
+      <div class="section-layout">
+        <div class="section-header-col reveal">
+          <span class="section-num">05 //</span>
+          <h2 class="section-title">Contact</h2>
+          <div class="horizontal-line"></div>
+        </div>
+
+        <div class="section-content-col reveal">
+          <div class="contact-grid">
+            
+            <div class="contact-info-col">
+              <h3 class="contact-subheading">Mari berkolaborasi mewujudkan ide Anda.</h3>
+              <p class="contact-desc">Saya selalu terbuka untuk berdiskusi tentang proyek pengembangan web modern, kesempatan magang/kerja, atau sekadar bertukar wawasan seputar dunia pemrograman.</p>
+              
+              <!-- Quick Email Copy Area -->
+              <div class="email-copy-card">
+                <span class="card-label">Email Saya</span>
+                <div class="email-copy-row">
+                  <span class="email-text" id="email-address">lyandrop.saputra@gmail.com</span>
+                  <button class="email-copy-btn magnetic" id="copy-email-btn" aria-label="Salin alamat email">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="copy-icon"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="check-icon hidden"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="social-vertical-list">
+                <span class="social-list-label">Ikuti saya</span>
+                <div class="social-links-row">
+                  <a href="https://github.com/LyanDSam" target="_blank" rel="noopener noreferrer" class="social-link-item magnetic">
+                    <span>GitHub</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/samuel-lyandro-saputra-57b73b382/" target="_blank" rel="noopener noreferrer" class="social-link-item magnetic">
+                    <span>LinkedIn</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://instagram.com/elyo0.o" target="_blank" rel="noopener noreferrer" class="social-link-item magnetic">
+                    <span>Instagram</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modern Form -->
+            <div class="contact-form-col">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" required placeholder=" " class="form-input">
+                  <label for="name" class="form-label">Nama Anda</label>
+                  <span class="form-border"></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required placeholder=" " class="form-input">
+                  <label for="email" class="form-label">Email Anda</label>
+                  <span class="form-border"></span>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" required placeholder=" " rows="5" class="form-input"></textarea>
+                  <label for="message" class="form-label">Pesan Anda</label>
+                  <span class="form-border"></span>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit-btn magnetic" id="submit-btn">
+                  <span>Kirim Pesan</span>
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="send-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- FOOTER SECTION -->
+  <footer id="footer" class="footer">
+    <div class="footer-container container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-logo-text">SAMUEL // ANDRO</span>
+          <p class="footer-tagline">Building modern, fast, and user-focused web experiences.</p>
+        </div>
+        
+        <!-- Interactive Code Console for Premium detail -->
+        <div class="footer-console" aria-hidden="true">
+          <div class="console-header">
+            <span class="console-dot"></span>
+            <span class="console-dot"></span>
+            <span class="console-dot"></span>
+            <span class="console-title">andro-terminal v1.0.0</span>
+          </div>
+          <div class="console-body">
+            <div class="console-line"><span class="c-accent">></span> andro.initStatus()</div>
+            <div class="console-line c-secondary">"System active & ready for collaboration"</div>
+            <div class="console-line"><span class="c-accent">></span> andro.location</div>
+            <div class="console-line c-secondary">"Surakarta, Indonesia"</div>
+            <div class="console-line"><span class="c-accent">></span> <span class="blink-cursor">_</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Samuel Lyandro Saputra. All rights reserved.</p>
+        <div class="footer-meta-info">
+          <span>Crafted with HTML, CSS & Vanilla JS</span>
+          <span class="separator">/</span>
+          <button class="back-to-top magnetic" id="back-to-top" aria-label="Kembali ke atas">
+            <span>UP</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
